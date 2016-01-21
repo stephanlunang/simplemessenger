@@ -1,0 +1,122 @@
+/* CSS declarations go here */
+#MessageCard{
+	border: 1px black solid;
+	background-color: white;
+	box-shadow: 1px 1px 1px black;
+	min-width: 20vw;
+	max-width: 80vw;
+	min-height: 50px;
+/*	margin: 5vh 10vw 5vh 10vw;*/
+}
+
+#MessageContainer{
+	height: 100vh;
+	width: 80vw;
+	border-right: 2px black solid;
+	border-left: 2px black solid;
+	background-color: #005950;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	margin: 0px 10vw 0px 10vw;
+}
+
+#cardcontainer{
+	height: 80vh;
+	overflow: scroll;
+	overflow-x: hidden;
+	width: 100%;
+	background-color: #D3D3D3;
+  border: 1px lightgray solid;
+}
+
+#textcont{
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight: bold;
+  color: black;
+  text-align: left;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 2vh;
+}
+
+#messengerheader{
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight: bold;
+	text-align: left;	
+	border: 1px lightgray solid;
+	background-color: white;
+	text-align: center;
+/*	box-shadow: 1px 1px 1px black;*/
+}
+
+body{
+	margin: 0px 0px 0px 0px;
+	background-color: lightgray;
+}
+
+#headercontainter{
+	width: 80vw;
+}
+
+#titlecard{
+  background-color: blue;
+}
+.message-entry input {
+  box-sizing: border-box;
+  border: 2px black solid;
+  width: 100%;
+  padding-right: 5vw;
+  max-height: 15vh;
+  font-size: 1em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow: scroll;
+
+}
+
+
+@media (max-width: 600px) {
+  .message-entry input {
+  	border: 1px black solid;
+    padding-bottom: 5px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    overflow: scroll;
+  }
+}
+
+
+#temporary{
+	height: 10vh;
+  width: 10vw;
+  background-color: black;
+}
+
+#login-buttons {
+  display: block;
+}
