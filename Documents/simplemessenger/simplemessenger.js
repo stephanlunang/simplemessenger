@@ -1,8 +1,12 @@
 Messages = new Mongo.Collection('messages');
 
 if (Meteor.isClient) {
-	angular.module('simplemessenger',['angular-meteor']);
- 
+	angular.module('simplemessenger',['angular-meteor', 'accounts.ui']);
+
+  	Accounts.ui.config({
+    	passwordSignupFields: "USERNAME_AND_EMAIL"
+  	});
+
   	angular.module('simplemessenger').controller('MessengerCtrl', ['$scope', '$meteor',
     	function ($scope, $meteor) {
  
@@ -11,7 +15,8 @@ if (Meteor.isClient) {
       		$scope.addMessage = function (newMessage) {
         		$scope.messages.push( {
           		text: newMessage,
-          		createdAt: new Date() 
+          		createdAt: new Date(), 
+          		username: Meteor.user().username
           	}
         );
       };

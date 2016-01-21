@@ -1,4 +1,23 @@
-/* CSS declarations go here */
+body{
+  margin: 0px 0px 0px 0px;
+}
+
+#MainMessage{
+  margin: 0px 0px 0px 0px;
+}
+
+#MIAB{
+  margin: 0px 0px 0px 0px;
+  height: 100vh;
+}
+
+#MessageNav{
+  margin: 0px 0px 0px 0px;
+  height: 100vh;
+  background-color: black;
+  width: 10vw;
+}
+
 #MessageCard{
 	border: 1px black solid;
 	background-color: white;
@@ -17,7 +36,6 @@
 	background-color: #005950;
 	padding-left: 5vw;
 	padding-right: 5vw;
-	margin: 0px 10vw 0px 10vw;
 }
 
 #cardcontainer{
@@ -48,6 +66,13 @@
   margin-left: 5vw;
   margin-right: 5vw;
   margin-top: 2vh;
+}
+
+#whodunit{
+  margin-top: 0px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  font-size: 10px;
 }
 
 #messengerheader{
@@ -119,4 +144,24 @@ body{
 
 #login-buttons {
   display: block;
+  text-align: center;
+  text-decoration: none;
 }
+
+#logins{
+  margin: 0px 0px 0px 0px;
+  min-height: 5vh;
+  width: 10vw;
+  background-color: white;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;  
+}
+
+
