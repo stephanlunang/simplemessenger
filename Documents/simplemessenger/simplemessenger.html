@@ -11,7 +11,7 @@
 <body>
 	<div class="container" ng-app="simplemessenger" ng-controller="MessengerCtrl" id='MainMessage'>
 		<div class='row' id='MIAB'>
-			<div class='col-md-3' id='MessageNav'>
+			<div class='col-md-2' id='MessageNav'>
 				<div id='logins'>
 					<login-buttons></login-buttons>
 				</div>
@@ -23,11 +23,11 @@
 			    <div class='col-xs-6 col-md-4' id='cardcontainer'>
 				    <div id='MessageCard' ng-repeat="message in messages">
 				    	<p id='textcont'>{{message.text}}</p>
-				    	<p id='whodunit'>{{message.username}}</p>
+				    	<p id='whodunit'>{{message.username}} - {{message.createdAt | date:'MM/dd/yyyy @ h:mma'}}</p>
 				    </div>
 				</div>
 				<form class="message-entry" ng-submit="addMessage(newMessage); newMessage='';" ng-show="$root.currentUser">
-		      		<input ng-model="newMessage" type="text" name="message" placeholder="Enter Message Here." autocomplete= "off" />
+		      		<input ng-click="gotoBottom();" ng-model="newMessage" type="text" name="message" placeholder="Enter Message Here." autocomplete= "off"/>
 		    	</form>
 			</div>
 		</div>

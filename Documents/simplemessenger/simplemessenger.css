@@ -2,6 +2,10 @@ body{
   margin: 0px 0px 0px 0px;
 }
 
+#row{
+  margin-left: 0px;
+}
+
 #MainMessage{
   margin: 0px 0px 0px 0px;
 }
@@ -9,12 +13,13 @@ body{
 #MIAB{
   margin: 0px 0px 0px 0px;
   height: 100vh;
+  width: 100vw;
 }
 
 #MessageNav{
   margin: 0px 0px 0px 0px;
   height: 100vh;
-  background-color: black;
+  background-color: #000080;
   width: 10vw;
 }
 
@@ -29,6 +34,7 @@ body{
 }
 
 #MessageContainer{
+  margin: 0px 0px 0px 0px;
 	height: 100vh;
 	width: 80vw;
 	border-right: 2px black solid;
@@ -146,12 +152,18 @@ body{
   display: block;
   text-align: center;
   text-decoration: none;
+  margin: 0px 0px 0px 0px;
+  padding-top: 1vh;
 }
 
 #logins{
   margin: 0px 0px 0px 0px;
-  min-height: 5vh;
-  width: 10vw;
+  min-height: 4vh;
+  max-height: 10vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  min-width: 4vw;
+  max-width: 10vw;
   background-color: white;
   overflow-wrap: break-word;
   word-wrap: break-word;
