@@ -1,9 +1,17 @@
 Messages = new Mongo.Collection('messages');
 
-
-Messages.allow({
-  insert: function (userId, party) {
-    return userId && party.owner === userId;
+Meteor.methods({
+  addMessage: function (text) {
+    if (! Meteor.userId()) {
+      throw new Meteor.Error('not-authorized');
+    }
+ 
+    Messages.insert({
+      	text: text,
+      	createdAt: new Date(),
+		username: Meteor.user().username,      
+        email: Meteor.user().emails[0].address
+    });
   }
 });
 
@@ -41,23 +49,20 @@ if (Meteor.isClient) {
 	    $urlRouterProvider.otherwise("/landing");
 	});  	
 
+	
+
   	angular.module('simplemessenger').controller('MessengerCtrl', ['$scope', '$meteor',
     	function ($scope, $meteor) {
  
       		$scope.messages = $meteor.collection(Messages);
 
       		$scope.addMessage = function (newMessage) {
-        		$scope.messages.push( 
-        			{text: newMessage, 
-        				createdAt: new Date(), 
-        				username: Meteor.user().username, 
-        				email: Meteor.user().emails[0].address
-        			});
+				$meteor.call('addMessage', newMessage);
       		};
       		$scope.gotoBottom = function (){
     			var objDiv = document.getElementById("cardcontainer");
        			objDiv.scrollTop = objDiv.scrollHeight;      			
-      		}
+      		};
     }]);
 
 	angular.module('simplemessenger').filter('displayName', function () {
