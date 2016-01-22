@@ -154,16 +154,20 @@ body{
   text-decoration: none;
   margin: 0px 0px 0px 0px;
   padding-top: 1vh;
+  font-size: 10px;
 }
 
 #logins{
   margin: 0px 0px 0px 0px;
   min-height: 4vh;
   max-height: 10vh;
-  padding-left: 1vw;
-  padding-right: 1vw;
+  padding-left: .5vw;
+  padding-right: .5vw;
   min-width: 4vw;
   max-width: 10vw;
+
+  border: 1px black solid;
+
   background-color: white;
   overflow-wrap: break-word;
   word-wrap: break-word;
