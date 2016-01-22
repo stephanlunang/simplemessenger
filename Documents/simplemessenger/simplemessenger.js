@@ -1,6 +1,16 @@
 Messages = new Mongo.Collection('messages');
 
+
+Messages.allow({
+  insert: function (userId, party) {
+    return userId && party.owner === userId;
+  }
+});
+
 if (Meteor.isClient) {
+	Meteor.subscribe("messages");
+	Meteor.subscribe("directory");
+
 	angular.module('simplemessenger',[
 		'angular-meteor', 
 		'accounts.ui',
